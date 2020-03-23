@@ -1,5 +1,5 @@
 import routerx from 'express-promise-router';
-import userController from '../controller/UserController';
+import apisController from '../controller/ApisController';
 import auth from '../middlewares/auth';
 const router=routerx();
 
@@ -11,6 +11,6 @@ const router=routerx();
 // router.delete('/remove',auth.verifyAdministrador,usuarioController.remove);
 // router.put('/activate',auth.verifyAdministrador,usuarioController.activate);
 // router.put('/desactivate',auth.verifyAdministrador,usuarioController.desactivate);
-router.post('/add',userController.add);
-router.post('/login',userController.login);
+router.post('/test1',auth.verifyAdministrador,apisController.listTest);
+
 export default router;
