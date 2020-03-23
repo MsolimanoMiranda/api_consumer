@@ -9,7 +9,7 @@ export default {
 listTest:async(req,res,next)=>{
 	try{
 	//	let valor=req.query.valor;
-        request('URL', function(err, body){
+        request('https://api.humanapi.co/v1/human/sleeps?access_token=demo', function(err, body){
          
             res.status(200).json(body);
         });
